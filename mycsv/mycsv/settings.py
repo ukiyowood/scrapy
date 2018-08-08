@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Scrapy settings for sswu project
+# Scrapy settings for mycsv project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -9,14 +9,14 @@
 #     https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'sswu'
+BOT_NAME = 'mycsv'
 
-SPIDER_MODULES = ['sswu.spiders']
-NEWSPIDER_MODULE = 'sswu.spiders'
+SPIDER_MODULES = ['mycsv.spiders']
+NEWSPIDER_MODULE = 'mycsv.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'sswu (+http://www.yourdomain.com)'
+#USER_AGENT = 'mycsv (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
@@ -27,22 +27,14 @@ ROBOTSTXT_OBEY = True
 # Configure a delay for requests for the same website (default: 0)
 # See https://doc.scrapy.org/en/latest/topics/settings.html#download-delay
 # See also autothrottle settings and docs
-DOWNLOAD_DELAY = 1
+#DOWNLOAD_DELAY = 3
 # The download delay setting will honor only one of:
 #CONCURRENT_REQUESTS_PER_DOMAIN = 16
 #CONCURRENT_REQUESTS_PER_IP = 16
 
 # Disable cookies (enabled by default)
-COOKIES_ENABLED = False
+#COOKIES_ENABLED = False
 
-IPPOOL = [
-	{"ipaddr":"106.46.3.237:808"},
-	{"ipaddr":"221.234.194.113:8010"},
-	{"ipaddr":"118.190.95.43:9001"},
-	{"ipaddr":"61.135.217.7:80"},
-	{"ipaddr":"182.88.14.246:8123"},
-	{"ipaddr":"120.33.247.243:21913"},
-]
 # Disable Telnet Console (enabled by default)
 #TELNETCONSOLE_ENABLED = False
 
@@ -55,16 +47,14 @@ IPPOOL = [
 # Enable or disable spider middlewares
 # See https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'sswu.middlewares.SswuSpiderMiddleware': 543,
+#    'mycsv.middlewares.MycsvSpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
-DOWNLOADER_MIDDLEWARES = {
-#    'sswu.middlewares.SswuDownloaderMiddleware': 543,
-	'scrapy.contrib.downloadermiddleware.httpproxy.HttpProxyMiddleware':123,
-	'sswu.sswu_middlewares.IPPOOLS':125
-}
+#DOWNLOADER_MIDDLEWARES = {
+#    'mycsv.middlewares.MycsvDownloaderMiddleware': 543,
+#}
 
 # Enable or disable extensions
 # See https://doc.scrapy.org/en/latest/topics/extensions.html
@@ -75,7 +65,7 @@ DOWNLOADER_MIDDLEWARES = {
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 #ITEM_PIPELINES = {
-#    'sswu.pipelines.SswuPipeline': 300,
+#    'mycsv.pipelines.MycsvPipeline': 300,
 #}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
