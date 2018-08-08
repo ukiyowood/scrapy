@@ -43,6 +43,9 @@ IPPOOL = [
 	{"ipaddr":"182.88.14.246:8123"},
 	{"ipaddr":"120.33.247.243:21913"},
 ]
+UAPOOL = [
+	"Mozilla/5.0 ()"
+]
 # Disable Telnet Console (enabled by default)
 #TELNETCONSOLE_ENABLED = False
 
