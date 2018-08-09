@@ -16,5 +16,5 @@ class SswuSpider(scrapy.Spider):
         item['title'] = response.xpath("/html/head/title/text()").extract()
         item['key'] = response.xpath("//meta[@name='keywords']/@content").extract()
         #print(item['title)
-        print(item)
+        #print(item)
         return item
